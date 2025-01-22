@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-.hide {
-  display: none;
-}
-
 img {
   width: 100%;
   height: auto;
@@ -35,13 +31,24 @@ header {
   flex-direction: column;
   align-items: center;
   font-family: "quicksand", sans-serif;
-  /* padding: 1rem; */
 }
 
 .marquee__section {
   max-width: 1160px;
   width: 100%;
   padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.marquee__heading {
+  background-color: #015277;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+  font-size: 20px;
+  color: #ffffff;
 }
 
 marquee {
@@ -51,9 +58,8 @@ marquee {
   display: flex;
   align-items: center;
   font-size: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-
 
 .nav__bar {
   max-width: 1160px;
@@ -61,7 +67,6 @@ marquee {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 0.5rem 0; */
   padding: 1rem;
   border-bottom: 1px solid orange;
 }
@@ -315,11 +320,10 @@ marquee {
 }
 
 /* main section*/
-
+/* curriculum section */
 main {
   width: 100%;
   font-family: "Quicksand", sans-serif;
-  /* padding: 1rem; */
 }
 
 .curriculum__container {
@@ -439,7 +443,6 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  /* padding-bottom: 1rem; */
   padding-bottom: 1rem;
 }
 
@@ -470,15 +473,9 @@ main {
   border-radius: 0.5rem;
   background-color: #ffffff;
   box-shadow: 0 0 5px rgba(128, 128, 128, 0.507);
-  /* position: relative; */
-}
-
-.stories__box_img {
-  height: 50%;
 }
 
 .stories__box_img img {
-  height: 100%;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
@@ -532,8 +529,9 @@ main {
   font-weight: 700;
   line-height: 30px;
 }
-
+/* main section responsiveness */
 @media screen and (min-width: 576px) {
+  /* curriculum section */
   .curriculum__title {
     font-size: 2.25rem;
   }
@@ -570,7 +568,6 @@ main {
     line-height: 28.8px;
     padding: 0.3rem 0.7rem;
     border-radius: 20px;
-    /* top: -16%; */
     left: 24px;
   }
 
@@ -582,6 +579,7 @@ main {
 }
 
 @media screen and (min-width: 768px) {
+  /*curriculum section  */
   .curriculum__title {
     font-size: 2.5rem;
   }
@@ -634,6 +632,7 @@ main {
 }
 
 @media screen and (min-width: 992px) {
+  /* curriculum section */
   .curriculum__container {
     padding-top: 3.5rem;
   }
@@ -662,8 +661,20 @@ main {
     border-radius: 50%;
     border: none;
     padding: 1rem;
-
     text-align: center;
+  }
+
+  /* hover effect*/
+  .curriculum__arrow img:hover {
+    background-color: rgb(231, 192, 120);
+  }
+
+  .curriculum__arrow img:hover:first-child {
+    transform: translate(-5px) scale(1.1);
+  }
+
+  .curriculum__arrow img:hover:last-child {
+    transform: translate(5px) scale(1.1);
   }
 
   /* stories */
@@ -746,7 +757,6 @@ main {
 
   .stories__time {
     padding: 0.5rem 1rem;
-    /* top: -23%; */
     left: 24px;
     border-radius: 30px;
   }
@@ -766,10 +776,11 @@ footer {
   display: flex;
   background-color: #01acfd;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   padding: 1rem;
   font-family: "Quicksand", sans-serif;
 }
+
 .footer__bar {
   max-width: 1160px;
   width: 100%;
@@ -813,7 +824,6 @@ footer {
 
 .footer__middle {
   display: flex;
-  /* flex: 1; */
   flex-direction: column;
   gap: 1.25rem;
 }
@@ -841,7 +851,6 @@ footer {
 }
 
 .footer__right {
-  /* flex: 1; */
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -854,7 +863,7 @@ footer {
   color: #ffffff;
 }
 
-/* media */
+/* footer bar responsiveness */
 
 @media screen and (min-width: 576px) {
   .website__logo {
@@ -922,23 +931,7 @@ footer {
   .footer__bar {
     flex-direction: row;
     justify-content: space-between;
-    /* justify-content: center; */
-    padding: 2rem;
+    /* padding: 2rem; */
     gap: 4rem;
   }
-}
-
-/* hover effect*/
-
-.curriculum__arrow img:hover {
-  background-color: rgb(231, 192, 120);
-  /* transform: skew(5deg); */
-}
-
-.curriculum__arrow img:hover:first-child {
-  transform: translate(-5px) scale(1.1);
-}
-
-.curriculum__arrow img:hover:last-child {
-  transform: translate(5px) scale(1.1);
 }
