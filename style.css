@@ -314,9 +314,9 @@ marquee {
     font-size: 3.5rem;
   }
 
-  .hero__title br {
+ /*  .hero__title br {
     display: none;
-  }
+  } */
 }
 
 /* main section*/
